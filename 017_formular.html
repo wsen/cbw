@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>017 Formular</title>
+        <meta charset="utf-8" />
+        
+        <style>
+            label {
+                display: inline-block;
+                width: 168px;
+            }
+            form div {
+                marging-bottom: 10px;
+            }
+            #send {
+                color: green;
+            }
+            button { background-color: white }
+            #msgLength { width: 35px; }
+        </style>
+	</head>
+	
+	<body>
+        <h1>017 Formular</h1>
+        
+        <form id="MaiForm" action="http://10.10.52.131/script/formularversand.php" method="post"> 
+            <!-- action="#" oder method="irgendwas" verwendet defaultmäßig get-Methode zum Senden (ohne method Angabe) -->
+            <div><label for="vorname" >Vorname:</label>
+            <input type="text" id="vorname" name="vorname" id="vorname" placeholder="Ihr Vorname" autofocus="autofocus" /></div>
+            <div><label for="nachname">Adelstitel und Nachname:</label>
+            <input type="text" name="nachname" id="nachname" placeholder="Adelstitel und Nachname" autocomplete='off' /></div>
+            <!-- triggert senden -->
+            <div><input type="submit" id="send" value="Mach Druck" /></div>
+
+            <div>
+                <label for="msg">Nachricht</label>
+                <textarea name="msg" id ="msg" placeholder="Es war einmal" maxLength="120" onkeyup="msgCount();"></textarea>
+                <input type="text" readonly="readonly" id="msgLength" placeholder="0"/>
+            </div>
+
+            <!-- triggert zurücksetzen -->
+            <div><input type="reset" id="del" value="Formular leeren" /></div>
+            <!-- noch undef -->
+            <div><input type="button" id="btn" value="macht nichts" onclick="zeigeData();" /></div>
+            <!-- triggert senden -->
+            <div><input type="image" id="imgSend" src="../media/images/button.jpg" alt="button.jpg" /></div>
+            <input type="hidden" name="geheim" value="123456" >
+
+            <!-- neu in HTML5 -->
+            <button type="submit">
+                <img src="../media/images/th.jpg" alt="Daten löschen" /><br />
+                <b>Daten löschen</b>
+            </button>
+        </form>
+        <script>
+            function zeigeData() {
+                alert(window.document.getElementById('vorname').value + '\n' +
+                window.document.getElementById('nachname').value);
+                // jquery
+                // $('#vorname').val();
+            }
+
+            function msgCount() {
+                var anzahl = 120 - document.getElementById('msg').value.length;
+                document.getElementById('msgLength').value = anzahl;
+            }
+        </script>
+
+		<h2></h2>
+		
+	</body>
+</html>

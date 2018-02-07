@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>024 Progress</title>
+		<meta charset="utf-8" />
+		<link href="./styles/global_style.css" type="text/css" rel="stylesheet" media="screen" />
+		<style ></style>
+
+		<style>
+			
+		
+		</style>
+	</head>
+	
+	<body>
+		<h1>Fortschrittsbalken</h1>
+        <h2>Progress</h2>
+        
+        <progress id="balken" value="0" max="3"></progress>
+
+        <hr />
+        <h3>Formular</h3>
+        <form id="myForm" onchange="fortschritt()">
+            <fieldset>
+                <legend>Brutale Fieldset 1-Beschriftung</legend>
+
+                <label for="field1">Eingabe</label>
+                <input type="text" id="feld1" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Brutale Fieldset 2-Beschriftung</legend>
+
+                <label for="field2">Eingabe</label>
+                <input type="text" id="feld2" />
+            </fieldset>
+            <fieldset>
+                <legend>Brutale Fieldset 3-Beschriftung</legend>
+
+                <label for="field3">Eingabe</label>
+                <input type="text" id="feld3" />
+            </fieldset>
+            <button id="btn" type="button" disabled>Formulardaten senden</button>
+        </form>
+        <progress id="balkan" value="0" max="3"></progress>
+        
+        <script src="script/jquery-3.3.1.min.js"></script>
+        <script>
+            //alert(document.getElementsByTagName('input'));
+            //var zaehler = 0;
+            $('input').keyup(function(){
+                var zaehler = 0;
+               $('input[type="text"]').each(function(){
+                   if( $(this).val().length >= 2 ) {
+                    zaehler++;
+                   } 
+               });
+
+               console.log(zaehler);
+
+               $('#balken').val(zaehler);
+               if(zaehler == 3) {
+                   $('#btn').removeAttr('disabled');
+               } else {
+                    $('#btn').attr('disabled','disabled');
+               }
+            });
+
+            function fortschritt() {
+                var felder = 0;
+                for (var i = 0; i < document.forms[0].elements.length; i++) {
+                    //felder = 0;
+                    if (document.forms[0].elements[i].value != '')
+                        felder++;
+                }
+                document.getElementById("balkan").value = felder;
+                document.getElementById("balkan").innerHTML="Fortschritt(" + felder + " von 3): ";
+            }
+            
+        </script>
+	</body>
+</html>

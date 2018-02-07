@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>07 iframes und hyperlinks</title>
+		<meta charset="utf-8" />
+		<style>
+			div { margin-bottom: 25px;}
+			a { margin: 20px; }
+
+			iframe {
+				border: none;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>iframes und hyperlinks</h1>
+		<div>
+			<a target="_blank" href="http://www.gmx.de">zu GMX</a>
+
+			<a target="frame_1" href="05_tabellen.html">05_tabellen</a>
+
+			<a target="frame_1" href="03_expando_attr.html">03_expando_attr</a>
+
+			<a target="frame_1" href="08_hyperlinks.html#abs2">08 Hyper Hyper</a>
+		</div>
+
+		<iframe scrolling="no" seamless="" name="frame_1" width="1200" height="500" src="http://www.cbw-weiterbildung.de">
+			<p>Ihr Browser kann iframes nicht darstellen.</p>
+		</iframe>
+
+
+	</body>
+</html>

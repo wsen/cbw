@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" /> <!-- charset meta besser hier vorne -->
+		<title>028 CSS3 Einführung</title>
+		
+		<link href="./styles/global.css" type="text/css" rel="stylesheet" media="screen" />
+		<link href="./styles/vererbung.css" type="text/css" rel="stylesheet" media="screen" />
+		<style ></style>
+
+		<style>
+			
+		
+		</style>
+	</head>
+	
+	<body>
+		<h1>CSS - Vererbung</h1>
+		<h2></h2>
+		
+		<p>Lorem ipsum dolor sit amet, <a href="#">consetetur sadipscing elitr</a>, sed diam nonumy eirmod tempor invid</p>
+
+		<div>
+			TEXT IM DIV: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+		
+			<p>P IM DIV:<a href="#">consetetur sadipscing elitr</a> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+					nonumy eirmoderat
+			</p>
+		<hr />
+			<div>
+					TEXT IM DIV DIV: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+					n
+				<p>P IM DIV DIV: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+						nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
+						erat
+				</p>
+			</div>
+		</div>	
+
+		<!-- Vererbung -->
+		<div id="div_gross">
+			<!-- Vererbung -->
+			<div id="div_klein">
+
+			</div>
+		</div>
+				
+	<div>DIV: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+			nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
+			erat, sed diam voluptua. At vero eos et accusam et justo duo 
+		</p>
+		<div>
+		<p>DIV im DIV: Lorem ipsum dolor  <a href="#">Alle Container Elemtente erben von Parent mit z.Bsp a { color: inherit; }</a> sit amet, consetetur sadipscing elitr, sed diam 
+				nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
+				erat
+		</p>
+		</div>
+	</div>
+		<script src="script/jquery-3.3.1.min.js"></script> 
+	</body>
+</html>

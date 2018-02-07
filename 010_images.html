@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Images</title>
+		<meta charset="utf-8" />
+
+		<style>
+			body {
+				background-color: white;
+			}
+
+			img {
+				/* width: 200px; */
+				/* float: left; */
+			}
+
+			#anzeige {
+				width: 1024px;
+				height: 768px;
+				border: 1px solid grey;
+			}
+		</style>
+	</head>
+
+	<body background="red">
+		<h1>Ge- und bebilderte Seite</h1>
+
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+			At vero eos et accusam <a href="http://www.trash.de" target="_blank" title="Schmeiss da rein!"><img src="../media/images/trash.png" alt="Kompletter Müll" /></a> et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+		<div>
+			<img data-imgBig="Tulips.jpg" src="../media/images/Tulips_klein.jpg" alt="buntes Zeug" />
+			<img data-imgBig="Desert.jpg" src="../media/images/Desert_klein.jpg" alt="Durst" />
+			<img data-imgBig="Jellyfish.jpg" src="../media/images/Jellyfish_klein.jpg" alt="Fich" />
+			<!-- Jetzt noch ein mouseover: -->
+			<img data-imgBig="Koala.jpg" src="../media/images/Koala_klein.jpg" alt="KoaaauAAla" onmouseover="imgGross.src='../media/images/Koala.jpg'" />
+		</div>
+		<div id="anzeige" name="anzeige"><img name="imgGross" src="../media/images/Tulips.jpg" alt="buntes Zeug"/></div>
+
+		<img src="../media/images/trash.png" alt="Kompletter Müll"  onmouseover="imgGross.src='../media/images/Chrysanthemum.jpg'" /> <!-- onclick="alert(this.src);" -->
+		<script src="script/jquery-3.3.1.min.js"></script>
+		<script>
+		 	//window.document.getElementById('anzeige').alert("wau");
+			$('img').click(function() {
+				var bild = $(this).attr('data-imgBig');
+				$('#anzeige').html('<img name="imgGross" src="../media/images/' + bild + '" alt="' + bild + '" />');
+			});
+		</script>
+	</body>
+</html>

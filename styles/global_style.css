@@ -1,0 +1,17 @@
+html {
+    font-size: 40%;
+}
+body {
+    font-size: 0.85em;
+    font-family: "Erwin Lottermann", Arial, Verdana, Tahoma, sans-serif;
+    /* ECMA Kommentarzeichen */
+    /* color: #000000; /* #rotgrünblau{2} Hexadezimal */
+    /* color: rgb(0,0,0) /* rgb */
+     color: rgb(0,0,0,0.9) /* rgba r,g,b,Helligkeit */
+}
+h1 {
+    font-size: 2rem; /* Erbt jetzt vom Root Element (html) statt vom Body (wei bei 2em) */
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    background-color: rgb(255, 255, 255);
+}

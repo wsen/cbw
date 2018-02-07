@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>05 Tabellen</title>
+		<meta charset="utf-8" />
+		<script src="script/jquery-3.3.1.min.js"></script>
+		<style>
+			h1 { text-align: center; }
+			table {
+				width: 90%;
+				margin: 0 auto;
+				border-collapse: collapse;
+			}
+			caption {
+				font-size: 2em;
+			}
+			td, th {
+				width: 20%; /* 1/5 der table-breite */
+				height: 100px;
+				border: 1px solid gray;
+				text-align: center;
+			}
+			
+			tr td:first-child {
+				color: red;
+			}
+			.verticalHeader {
+				background-color: yellow;
+			}
+			.verticalHeader4 {
+				background-color: fuchsia;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>05 Tabellen</h1>
+		
+		<table>
+		<colgroup>
+			<col />
+			<col span="2" class="verticalHeader" />
+			<col class="verticalHeader4" />
+		</colgroup>
+		
+		<caption>Tabellen-Caption</caption>
+		  <thead>
+		  <!-- wird auf jeder Seite mitgedruckt -->
+			<tr>
+				<th>col 1</th><th>col 2</th><th>col 3</th><th>col 4</th><th>col 5</th>
+			</tr>
+		  </thead>
+		  
+		  <tbody>
+			<tr>
+				<td colspan="5">sadsadas</td>
+			</tr>
+			<!-- Reihe 1 -->
+			<tr>
+				<td>sadasd</td><td>asdsdad</td><td></td><td></td><td></td>
+			</tr>
+			<!-- Reihe 2 -->
+			<tr>
+				<td colspan="2" rowspan="2">asdasd</td>
+				<td>adadd</td>
+				<td rowspan="2" colspan="2"></td>
+			</tr>
+			<!-- Reihe 3 -->
+			<tr>
+				<td>asdadasd</td>
+			</tr>
+			<!-- Reihe 4 -->
+			<tr>
+				<td>asdasd</td><td></td><td></td><td></td><td></td>
+			</tr>
+		  </tbody>
+		</table>
+		<script>
+			
+			
+		</script>
+	</body>
+</html>

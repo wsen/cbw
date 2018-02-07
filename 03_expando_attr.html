@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>03 expando-attr</title>
+		<meta charset="utf-8" />
+		<style>
+			h1:hover { color: red; }
+			p:hover { cursor: pointer; }
+		</style>
+		<script src="script/jquery-3.3.1.min.js"></script>
+	</head>
+	
+	<body>
+		<h1>expando-attribute</h1>
+		
+		<p id="456" data-tnNumber="123">Erwin Lottermann</p>
+		
+		<script>
+			$('p').click(function() {
+				console.log(this.id);
+				
+				alert($(this).attr('data-tnNumber'));
+			});
+		</script>
+	</body>
+</html>

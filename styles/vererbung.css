@@ -1,0 +1,47 @@
+/* @import url('global_style.css'); */
+
+/* html {
+    font-size: 100%;
+} */
+
+body {
+    font-size: 30px;
+    color: green;
+}
+div {
+    font-size: 1.2em; /* em ein Vielfaches des Elternparaments waldvogel2schlachtplatte?prostmahlzeit! */
+}
+p {
+    font-size: 1em;
+}
+h1 {
+    font-size: 1.5em;
+}
+
+a { color: inherit; }
+
+a:hover {
+    color: fuchsia;
+    text-decoration: none;
+}
+
+div a { font-weight: bold; }
+
+div div p { color: orange; }
+
+div p { color: blue; }
+div div > p { color: blue; font-style: italic; }
+
+#div_gross {
+    width: 500px;
+    height: 300px;
+    background-color: blanchedalmond;
+}
+
+#div_klein {
+    width: 250px;
+    height: 150px;
+    border: 2px solid black;
+    margin-left: 350px;
+    margin-top: 30px;
+}

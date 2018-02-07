@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Seitentitel</title>
+		<meta charset="utf-8" />
+    </head>
+    <style>
+        #ausgabe {
+            border: 1px solid grey; 
+            height: 100px;
+        }
+
+        label {
+            display: inline-block;
+            width: 128px;
+            vertical-align: top;
+        }
+        form div {
+            marging-bottom: 10px;
+        }
+    </style>
+
+    
+
+	<body>
+		<h1>Form Schieberegler (range)</h1>
+		<h2>RGB-Regler (<span id="rgb_farbe"></span>)</h2>
+
+        <div id="ausgabe"></div>
+        <hr />
+        <form action="#">
+            <formset>
+                <div>
+                    <label for="r">Rot:</label>
+                    <input type="range" name="r" id="r" min="0" max="255" step="1" onmousemove="createColor();" />
+                </div>
+                <div>
+                    <label for="g">Gruen:</label>
+                    <input type="range" name="g" id="g" min="0" max="255" step="1" onmousemove="createColor();" />
+                </div>
+                <div>
+                    <label for="b">Blau:</label>
+                    <input type="range" name="b" id="b" min="0" max="255" step="1" onmousemove="createColor();" />
+                </div>
+                <a href="javascript:hello();">hello</a>  
+                <!-- <input type="button" /> -->
+            </formset>
+        </form>
+        <script src="script/jquery-3.3.1.min.js"></script>  
+        <!-- <script src="script/hello.js"></script> -->
+        <!-- <script src="http://10.10.52.131/script/rgb.js"></script> -->
+        <script>
+            function createColor() {
+                var rot = $('#r').val(); //!!! not value() !!!
+                var gruen = $('#g').val();
+                var blau = $('#b').val();
+                
+                $('#ausgabe').css('backgroundColor', 'rgb('+rot+','+gruen+','+blau+')');
+                $('#rgb_farbe').html('rgb('+rot+','+gruen+','+blau+')');
+            }
+
+            function hello () {
+                alert("hello");
+            }
+        </script>
+	</body>
+</html>

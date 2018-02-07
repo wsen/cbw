@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>012 Semantic HTML</title>
+		<meta charset="utf-8" />
+        <style>
+            header, nav, main, section, article, aside, footer {display: block;}
+            span { color: green; }
+            .spacer {
+                display: inline-block; /* 1. Normalwerweise kein Abstand im inline Element definierbar -> 
+                2. für .spacer innerhalb span: span Element ist ein inline Element -> deswegen erst als Block Element definieren */
+                width: 10em;
+            }
+            .keepWhiteSpace {
+                white-space: pre;
+            }
+
+            summary { cursor: pointer; }
+        </style>
+	</head>
+        
+	
+	<body>
+        <h1>Semantic HTML, Neue HTML Tags - Block Elemete</h1>
+        <h2>Semantisches HTML - Block-Elemente</h2>
+        <pre>
+            &lt;header&gt;&lt;/header&gt;
+            &lt;nav&gt;&lt;/nav&gt;
+            &lt;main&gt;
+                &lt;section&gt;
+                    &lt;article&gt;&lt;/article&gt;
+                    &lt;aside&gt;&lt;/aside&gt;
+                &lt;/section&gt;
+            &lt;/main&gt;
+            &lt;footer&gt;&lt;/footer&gt;
+        </pre>
+        <hr />
+        <nav>NAV</nav>
+        <hr />
+        <main>
+            <h2>Semantische Textauszeichnung</h2>
+            <section>
+                <article>
+                    <p>
+                        Lorem ipsum <strong>strong: stark betont </strong> dolor sit amet, &nbsp;&nbsp;&nbsp; consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <span class="spacer">Abstands-span</span>At vero eos et accusam et justo duo dolores et ea rebum. <em>Hier ist em</em> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy Donaudampfschiff&shy;fahrtsgesellschaftkapitänsmützenknopf eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <span>Ein <b>span</b> Element ist <b>nicht semantisch</b> </span> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy <q>Q: eirmod tempor invidunt ut labore et dolore magna aliquyam erat</q>, sed diam voluptua. At 
+                    </p>
+                    <blockquote>
+                        BLOCKQUOTE Langes Zitat - block:
+                        Stet clita kasd gubergren, no sea <cite>CITE: takimata sanctus</cite> est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, <em>EM: im Vergleich mit &lt;em&gt; tag</em> consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt:
+                    
+                    </blockquote>
+                    <p>
+                        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                        by William Shakespeare,
+                        <cite>Romeo and Juliet</cite> Act 2, scene 2 
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    </p>
+                    <p>
+                        A DFN motor vehicle has a 
+                        <dfn id="vin"><abbr title="Vehicle Identification Number">VIN</abbr></dfn>
+                        that is unique. Over the years, the
+                        <abbr title="Vehicle Identification Number">VIN</abbr>
+                        has had different formats,
+                        based on the vehicle manufacturer.
+                    </p>
+                    <p>
+                        In the United States, the <a href="#vin">
+                        <abbr title="Vehicle Identification Number">VIN</abbr></a>
+                        was standardized to a 17 character format where
+                        the 10th character of the
+                        <abbr title="Vehicle Identification Number">VIN</abbr>
+                        represents the year of the vehicle.
+                    </p>
+                    <pre> PRE: &nbsp; erzeugt neuen Abschnitt DON'T use it inside &lt;p&gt; Tag</pre>
+                </article>
+                <hr />
+                CODE
+                <article>
+                <code class="keepWhiteSpace">
+                    CODE:
+                    sayHello('Mom');
+                    function sayHello(name)
+                    {
+                        alert('Hello ' + name + '!');
+                    }
+                </code>
+                
+                SAMP
+                <samp class="keepWhiteSpace">
+                    SAMP:
+                    Hello Mom!
+                </samp>
+                </article>
+                <hr />
+                FIGURE:
+                <div>
+                    <figure id="figure1">
+                        <img src="../../media/images/Koala_klein.jpg" alt="peanut butter and jelly requirements" />
+                        <figcaption>(FIGCAPTION:) Figure 1 Tehe Koala-Image description</figcaption>
+                    </figure>
+                </div>
+                <aside>ASIDE stuff</aside>
+                <hr />
+                <mark>SUMMARY</mark>
+                <div>
+                    <details>
+                        <summary>Make SUMMARY DETAILS a peanut butter and jelly sandwich (read weiter)</summary>
+                        <p>
+                            The peanut butter and jelly
+                            <abbr title="peanut butter and jelly">PB&J</abbr>
+                            sandwich has been a staple food of many American families
+                            due to its health benefits, its cost, and its
+                            wonderful flavor.
+                        </p>
+                        <p>
+                            When assembling a peanut butter and jelly sandwich,
+                            you need to gather all the required materials as
+                            shown in <a href="#figure1">Figure 1</a>.
+                        </p>
+                        <figure id="figure1">
+                        <img src="../../media/images/Koala_klein.jpg" alt="peanut butter and jelly requirements" />
+                        <figcaption>Figure 1 Tehe Koala-Image description</figcaption>
+                        </figure>
+                    </details>
+                </div>
+            </section>
+        </main>
+        <footer></footer>        
+				
+        
+        
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>018 Formular</title>
+        <meta charset="utf-8" />
+        <script src="script/jquery-3.3.1.min.js"></script>
+        <style>
+            label {
+                display: inline-block;
+                width: 128px;
+                vertical-align: top;
+            }
+            form div {
+                marging-bottom: 10px;
+            }
+            #fsLinks, #fsRechts {
+                width: 45%;
+                display: inline-block;
+            }
+            #rangeValue { width: 35px; text-align: center;}
+        </style>
+	</head>
+	
+	<body>
+		<h1>Formulaar</h1>
+        <h2>Formularelemente - alt</h2>
+        <form id="MaiForm" action="http://10.10.52.131/script/formularversand.php" method="post" enctype="multipart/form-data">
+            <fieldset id="fsLinks">
+                <div><label for="txt" >Text:</label>
+                    <input type="text" id="txt" name="txt" autofocus="autofocus" placeholder="Text" autofocus="autofocus" required="required" /></div>
+                </div>
+
+                <div>
+                    <!-- <label for "pass">Password</label>
+                    <input type="password" name="pass" id="pass" placeholder="Passwort" required="required" /> -->
+                </div>
+
+                <div>
+                    <label for "upld">File</label>
+                    <input type="file" name="upld" id="upld" />
+                </div>
+
+                <div>
+                    <label for="msg">Textarea</label>
+                    <textarea name="msg" id ="msg" placeholder="Ihre Nachricht" maxLength="120"></textarea>
+                </div>
+                <hr /><h2>Select Box</h2>
+                <div>
+                    <label for="auswahl">Select: </label>
+                    <select name="auswahl" id="auswahl">
+                        <option value="a1">Auswahl 1</option>
+                        <option value="a2">Auswahl 2</option>
+                        <option value="a3" selected="selected">Auswahl 3</option>
+                        <option value="a4">Auswahl 4</option>
+                    </select>
+                </div>
+    <hr /><h2>Mutiple Select</h2>
+                <div>
+                    <label for="auswahl2">Select: </label>
+                    <select name="auswahl2[]" id="auswahl2" multiple="multiple" size="7">
+                        <option value="a1" selected>Auswahl 1</option>
+                        <option value="a2">Auswahl 2</option>
+                        <option value="a3" selected="selected">Auswahl 3</option>
+                        <option value="a4">Auswahl 4</option>
+                        <option value="a5">Auswahl 5</option>
+                        <option value="a6">Auswahl 6</option>
+                    </select>
+                </div> 
+    <hr />        
+                <h2>Checkbox</h2>
+                <div>
+                    <label for "check">Checkbox</label>
+                    <input type="checkbox" name="z" id="y1" title="Checkbox" />
+                </div>
+    <hr />
+                <h2>Radiobox</h2>
+                <div>
+                
+                    
+                    <input type="radio" name="radiorob" id="z1" value="Mastercard" />
+                    <label for "z1">Mastercard</label>
+                    <label for "z2">Bitcoin</label>
+                    <input type="radio" name="radiorob" id="z2" value="Bitcoin" />
+                    <label for "z3">Pleitegeier</label>
+                    <input type="radio" name="radiorob" id="z3" value="Pleitegeier" />
+                    <label for "z4">Bankraub</label>
+                    <input type="radio" name="radiorob" id="z4" value="Bankraub" />
+                
+                </div>
+            </fieldset>
+            <fieldset id="fsRechts">
+                <h2>Formularelemente - Neu in HTML5</h2>
+                <div>
+                    <label for "mail">Email</label>
+                    <input type="email" name="mail" id="mail" placeholder="Email" pattern="^[a-zA-Z\.\-_0-9]{2,}@\w{2,}\.[a-zA-Z]{2,}$" value="hans@franz.fr"/>
+                </div>
+                <div>
+                    <label for "farbe">Color:</label>
+                    <input type="color" name="color" id="color" value="#ff0080" />
+                </div>
+
+                <div>
+                    <label for "number">Number:</label>
+                    <input type="number" name="number" min="3" step="5" id="number" value="" />
+                </div>
+
+                <div>
+                    <label for "date">Date:</label>
+                    <input type="date" name="date" id="date" value="01.01.2010" />
+                </div>
+
+                <div>
+                    <label for "hp">URL:</label>
+                    <input type="url" name="url" id="hp" value="" />
+                </div>
+
+                <div>
+                    <label for "raeinsch">Bereich:</label>
+                    <input type="range" name="raeinsch" id="raeinsch" step="10" title="25" onmousemove="zeigeRange()" value="30" />
+                    <input type="text" readonly="readonly" id="rangeValue" />
+                </div>
+        
+    
+            </fieldset>
+
+            <div><input type="submit" id="send" value="SENDEN" /></div>
+        </form>
+		<script>
+            function zeigeRange() {
+                $('#rangeValue').val($('#raeinsch').val());
+                // $('bereich').attr('title', $('#bereich').val());
+            }
+        </script>
+	</body>
+</html>

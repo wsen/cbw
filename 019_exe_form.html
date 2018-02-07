@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title018 exercise_form</title>
+		<meta charset="utf-8" />
+	</head>
+    <style>
+        label {
+            display: inline-block;
+            width: 128px;
+            vertical-align: top;
+            margin-top: 3px;
+        }
+        form div {
+            marging: 10px;
+        }
+        input {
+            margin: 3px;
+        }
+    </style>
+	<body>
+		<h1>Übung Formular</h1>
+        <h2>zweite &Uuml;berschrift der Seite</h2>
+        
+        <form action="./script/kontaktliste.php" method="post">
+            <div>
+                <label for="vorname">Vorname</label>
+                <input type="text" name="vorname" id="vorname" placeholder="Wie heisst Du" />
+            </div>
+            <div>
+                <label for="nachname">Name</label>
+                <input type="text" name="nachname" id="nachname" placeholder="Familienname" />
+            </div>
+            <div>
+                <label for="email">Mail</label>
+                <input type="email" name="email" id="email" placeholder="Deine Mail Adresse" />
+            </div>
+            <div>
+                <label for="mobil">Telefonnummer</label>
+                <input type="text" name="mobil" id="mobil" pattern="^[0-9 +()/$]{8,}" placeholder="und Telefonnummer" />
+            </div>
+
+            </div>
+                <input type="submit" />
+            </div>
+        </form>
+		
+	</body>
+</html>
