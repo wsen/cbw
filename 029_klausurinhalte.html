@@ -1,0 +1,269 @@
+<!-- In der erste Zeile des Dokuments immer das "!DOCTYPE" -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>029 Klausurinhalte</title>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="beschreibung1, hcj1, Klausur" /> 
+        <!-- <link href="styles/global_style.css" type="text/css" rel="stylesheet" media="screen" /> -->
+        
+       <!-- <link href="styles/global.css" type="text/css" rel="stylesheet" media="screen" /> --><!-- relativ -->
+        <link href="/styles/global.css" type="text/css" rel="stylesheet" media="screen" /><!-- absolut -->
+        <link href="http://www.styleserver.com/styles/global.css" type="text/css" rel="stylesheet" media="screen" /><!-- url -->
+		<style ></style>
+
+		<style>
+			
+		
+		</style>
+	</head>
+	
+	<body>
+        <h1>Klausurinhalte</h1>
+        <h3>HTML Entitities</h3>
+        <ul>
+            <li><b>&lt;</b></li>
+            <li><b>&gt;</b></li>
+            <li><b>&amp;...;</b></li>
+        </ul>
+
+        <hr /><h3>HTML Grundgerüst</h3>
+         <ul>
+            <li>html</li>
+            <li>head</li>
+            <li>body</li>
+        </ul>
+        <hr /><h3>HTML-Struktur NEU IN HTML5</h3>
+        semantisch (verhalten sich wie ein div)
+         <ul>
+            <li>header</li>
+            <li>nav</li>
+            <li>main</li>
+            <li>section</li>
+            <li>article</li>
+            <li>aside</li>
+            <li>footer</li>
+        </ul>
+
+        <hr /><h3>Formular: Mögliche Beschriftung eine Input Elements</h3>
+        semantisch (verhalten sich wie ein div)
+         <ul>
+            <li>label for="id Input Elment"</li>
+            <li>placeholder=""</li>
+            <li>id (Input Element)</li>
+        </ul>
+        Beispiel: 
+        <form> 
+            <h3>Kreuzen Sie die gewünschten Zutaten an:</h3> 
+            <fieldset>
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" name="zutat" value="salami" id="check1">
+                    Salami
+                  </label>
+                </li>
+                <li> 
+                  <label for="check2">
+                    <input type="checkbox" name="zutat" value="schinken" id="check2">
+                    Schinken
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="zutat" value="sardellen" id="check3">
+                  <label for="check3">
+                    Sardellen
+                  </label>
+                </li>
+              </ul> 
+            </fieldset> 
+          </form>
+
+        <hr /><h3>Formular: Schaltfläche mit Bild und Submit-Funktion (sc)</h3>
+        <form action="">
+            <button type="submit"><img src="#" alt="hallo hier" /></button>
+            <input type="image" src="#"  alt="hallo hier fehlt was"/>
+        </form>
+
+        <hr /><h3>Formular: Attribut-Werte NEU in HTML5 für das Attribut "type" im "input"</h3>
+         <ul>
+            <li>email</li>
+            <li>url</li>
+            <li>tel</li>
+            <li>number</li>
+            <li>datetime</li>
+            <li>time</li>
+            <li>footer</li>
+            <li>range</li>
+            <li>color</li>
+            <li></li>
+        </ul>
+        
+        <hr /><h3>HTML5 Ausklapptext mit details und summary"</h3>
+         <details>
+             <summary>Kurztext (Ausklappe für weitere Details</summary>
+             <p>PARAGRAPH: Das <strong>STRONG: &lt;strong&gt; ist semantisch</strong> das <b>&lt;b&gt; dagegen nicht</b>  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna <q>QUOTE: aliquyam erat, sed diam voluptua</q>. At vero eos et accusam et justo duo dolores et ea rebum. 
+                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+         </details>
+
+
+        <hr /><h3>Semantische Bildunterschrift</h3>
+         <ul>
+            <li>figure</li>
+            <li>img src="" alt=""</li>
+            <li>figcaption</li>
+
+        </ul>
+        <figure>
+            <img src="" alt="Bild fehlt" />
+            <figcaption>Bildunterschrift</figcaption>
+        </figure>
+
+        <hr /><h3>Listen (sc)</h3>
+            <ul id="" name="" class="" type="" style="" title=""><!-- type: *disc, square, circle -->
+                <li></li>
+            </ul>
+
+            <ol start="" id="" name="" class="" type="" style="" title=""><!-- type: *1, A, a, I, i -->
+                <li></li>
+                <li value=""></li>
+            </ol>
+          <hr /><h3>Links und iframes</h3>
+          
+          <a href="blabla.html" target="target_zu_ifram_zumBsp" >zu iframe Inhalt</a>
+
+          <iframe src="blabla.html" name="target_name"></iframe>
+
+          <hr /><h3>Blockelemente</h3>
+
+		<p>PARAGRAPH: Das <strong>STRONG: &lt;strong&gt; ist semantisch</strong> das <b>&lt;b&gt; dagegen nicht</b>  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+             magna <q>QUOTE: aliquyam erat, sed diam voluptua</q>. At vero eos et accusam et justo duo dolores et ea rebum. 
+             Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+             consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+             no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+             <blockquote>BLOCKQUOTE: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</blockquote>
+     
+        <!-- 
+            keine weiteren Bockelemente innerhalb eines Blockelments, in z.Bsp <p> <h> erlaubt:
+                <blockquote>, <h>
+
+        --> 
+        <hr /><h3>Mir bekannte Blockelemente</h3>
+            <ul>
+                <li>p</li>
+                <li>div</li>
+                <li>h1 - h6</li>
+                <li>aside</li>
+                <li>blockquote</li>
+                <li></li>
+
+            </ul>
+            NIX: Table !
+
+        <hr /><h3>Mir bekannte Inlineelemente</h3>
+        <ul>
+                <li>a</li>
+                <li>span</li>
+                <li>strong</li>
+                <li>b</li>
+                <li>em</li>
+                <li>i</li>
+                <li>q</li>
+                <li>img</li>
+                <li>q</li>
+                <li></li>
+            </ul>
+
+            <hr /><h3>Mir bekannten boolschen Werte</h3>
+            <ul>
+                <li>autofocus</li>
+                <li>disabled</li>
+                <li>required</li>
+                <li>selected, checked</li>
+                <li>readonly</li>
+                <li>media: controls, loop, autoplay, muted, </li>
+                <li>mutliple</li>
+                <li></li>
+
+            </ul>
+
+        <hr /><h3>Formular</h3>
+        <form action="ysy.php" method="post" enctype="multipart/form-data"> <!-- enctype NUR bei type file -->
+            <input name="date" type="file" />
+        </form>
+        
+        <hr /><h3>Description (definition) List</h3>
+            <dl>
+                <dt>DT: description (list) term</dt>
+                <dd>DD: description (list) description</dd>
+            </dl>
+            <h4>Beispiel Gängige Abkürzungen</h4>
+            <dl> <dt>allg.</dt>
+                <dd>allgemein</dd> <dt>bez.</dt>
+                <dd>bezüglich</dd>
+                <dd>bezahlt</dd> <dt>u. a.</dt>
+                <dd>unter anderem, unter anderen</dd>
+                <dd>und andere, und anderes</dd> <dt>zzgl.</dt>
+                <dd>zuzüglich</dd>
+            </dl>
+
+        <hr /><h3>Area Tag</h3>
+        <ul>
+            <li>shape</li>
+            <li>cords</li>
+            <li>href</li>
+            <li>alt</li>
+        </ul>
+        <h4>Shape-Definitionen eines Kreises</h4>
+        <ul>
+            <li>circle</li>
+            <li>cords + Mittelpunkt (2 Werte) + Radius</li>
+        </ul>
+
+        <hr /><h3>Image</h3>
+        <ul>
+            <li>src</li>
+            <li>alt</li>
+            <li>href</li>
+            <li>alt</li>
+        </ul>
+
+        <hr /><h3>Imagemap (sc)</h3>
+        WICHTIG: # weist auf name und nicht auf id !!!
+        <img src="#" alt="schon wieder kein Bild" usemap="#myMap" > <!-- WICHTIG: # weist auf name und nicht auf id !!! -->
+        <map name="myMap">
+            <area />
+        </map>
+
+        <hr /><h3>Mögliche Videoformate in HTML</h3>
+        <ul>
+            <li>ogv(video/ogg)</li>
+            <li>mp4(video/mp4)</li>
+            <li>webm(video/webm)</li>
+        </ul>
+
+        <hr /><h3>Mögliche Attribute des "audio"-Tags</h3>
+         <ul>
+            <li>src</li>
+            <li>loop</li>
+            <li>controls</li>
+            <li>autoplay</li>
+            <li>preload</li>
+        </ul>
+
+            <p>PARAGRAPH: Das <strong>STRONG: &lt;strong&gt; ist semantisch</strong> das <b>&lt;b&gt; dagegen nicht</b>  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna <q>QUOTE: aliquyam erat, sed diam voluptua</q>. At vero eos et accusam et justo duo dolores et ea rebum. 
+                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>    
+
+		<script src="script/jquery-3.3.1.min.js"></script> 
+	</body>
+</html>
