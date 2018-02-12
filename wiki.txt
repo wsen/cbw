@@ -1,0 +1,38 @@
+==css==
+* Fileupload
+enctype="multipart/form-data"
+* Grundgerüst HTML
+html head body
+* Area Pflicht Tags
+shape, cords, href, alt
+* Html TZusammen eine logische Funktionalität
+del, ins 
+* Empfänger in form
+action
+* Mindest-Meta Angaben (<> Tag)
+title
+charset (optional)
+* Audio- u Videoformate in HTML5
+mp3, ogg, mp4, webm, ogv, wav,
+* Attribute audio-Tag
+title, ..
+* shape Attribute Attribute
+rect, circle, poly
+* area shape Kreis
+circle, 3 Werte
+* Zeilenumbruch verhindern mit 
+&nbsp;
+* Blockelemente
+</hr>
+* hat immer schließenden End-Tag
+video, audio, iframe
+* Boolsche Attribute
+controls, autofocus, disabled
+nichtt: contenteditable - text im container beschreibar machen
+* Ausklapptexte:
+details und summary
+* Worauf bezieht sich der Wert des Attributs "usemap":
+name der map-Definition
+
+
+
